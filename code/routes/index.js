@@ -8,6 +8,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 import { createProxyMiddleware, fixRequestBody } from 'http-proxy-middleware';
 
 const proxyTable = {
+  '/progressApi': 'http://progress:3013',
   '/questionnaireApi': 'http://questionnaire:3012',
   '/accountsApi': 'http://msaccounts:3011'
 };
@@ -15,6 +16,7 @@ const proxyTable = {
 const options = {
   router: proxyTable,
   pathRewrite: {
+    '^/progressApi': '',
     '^/questionnaireApi': '',
     '^/accountsApi': ''
   },
