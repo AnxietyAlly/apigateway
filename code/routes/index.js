@@ -8,9 +8,9 @@ router.use(bodyParser.urlencoded({ extended: false }));
 import { createProxyMiddleware, fixRequestBody } from 'http-proxy-middleware';
 
 const proxyTable = {
-  '/progressApi': 'http://progress:3013',
-  '/questionnaireApi': 'http://questionnaire:3012',
-  '/accountsApi': 'http://msaccounts:3011'
+  '/progressApi': 'https://anxietyally-progress-microservice.onrender.com',
+  '/questionnaireApi': 'https://questionnaire-microservice.onrender.com',
+  '/accountsApi': 'https://anxietyally-accounts-microservice.onrender.com'
 };
 
 const options = {
