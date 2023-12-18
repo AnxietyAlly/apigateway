@@ -8,17 +8,17 @@ router.use(bodyParser.urlencoded({ extended: false }));
 import { createProxyMiddleware, fixRequestBody } from 'http-proxy-middleware';
 
 const proxyTable = {
-  '/progressApi': 'https://anxietyally-progress-microservice.onrender.com',
-  '/questionnaireApi': 'https://questionnaire-microservice.onrender.com',
-  '/accountsApi': 'https://anxietyally-accounts-microservice.onrender.com'
+  '/accountsApi': 'https://aa-accounts-ms-sprint-2-2.onrender.com/',
+  '/progressApi': 'https://aa-progress-ms-sprint-2-2.onrender.com/',
+  '/questionnaireApi': 'https://aa-questionnaire-ms-sprint-2-2.onrender.com/',
 };
 
 const options = {
   router: proxyTable,
   pathRewrite: {
+    '^/accountsApi': '',
     '^/progressApi': '',
     '^/questionnaireApi': '',
-    '^/accountsApi': ''
   },
   changeOrigin: true,
   onProxyReq: fixRequestBody,
