@@ -11,6 +11,9 @@ const proxyTable = {
   '/accountsApi': 'https://aa-accounts-ms-sprint-2-2.onrender.com/',
   '/progressApi': 'https://aa-progress-ms-sprint-2-2.onrender.com/',
   '/questionnaireApi': 'https://aa-questionnaire-ms-sprint-2-2.onrender.com/',
+  //'/accountsApi': 'http://msaccounts:3011',
+  //'/progressApi': 'http://progress:3013',
+  //'/questionnaireApi': 'http://questionnaire:3012',
 };
 
 const options = {
