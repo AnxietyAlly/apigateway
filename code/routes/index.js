@@ -9,8 +9,11 @@ import { createProxyMiddleware, fixRequestBody } from 'http-proxy-middleware';
 
 const proxyTable = {
   '/accountsApi': 'https://aa-accounts-ms-sprint-3.onrender.com/',
+  '/articlesApi': 'https://aa-robodoc-ms-sprint-3.onrender.com',
   '/progressApi': 'https://aa-progress-ms-sprint-3.onrender.com/',
   '/questionnaireApi': 'https://aa-questionnaire-ms-sprint-3.onrender.com/',
+  '/quotesApi': 'https://aa-quotes-ms-sprint-3.onrender.com',
+  '/robodocApi': 'https://aa-robodoc-ms-sprint-3.onrender.com',
   //'/accountsApi': 'http://msaccounts:3011',
   //'/progressApi': 'http://progress:3013',
   //'/questionnaireApi': 'http://questionnaire:3012',
@@ -20,8 +23,11 @@ const options = {
   router: proxyTable,
   pathRewrite: {
     '^/accountsApi': '',
+    '^/articlesApi': '',
     '^/progressApi': '',
     '^/questionnaireApi': '',
+    '^/quotesApi': '',
+    '^/robodocApi': '',
   },
   changeOrigin: true,
   onProxyReq: fixRequestBody,
